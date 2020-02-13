@@ -8,6 +8,9 @@
         <action name="accueilConnexion">
             <result>/WEB-INF/pages/connexion.jsp</result>
         </action>
+        <action name="accueil">
+            <result>/WEB-INF/pages/pageAccueil.jsp</result>
+        </action>
         <action name="connexion" class="action.Connexion">
             <result name="success">/WEB-INF/pages/pageAccueil.jsp</result>
             <result name="input">/WEB-INF/pages/connexion.jsp</result>
@@ -18,8 +21,17 @@
         <action name="mesParis" class="action.mesParis">
             <result>/WEB-INF/pages/mesParis.jsp</result>
         </action>
-        <action name="parisOuverts">
-            <result></result>
+        <action name="parisOuverts" class="action.parisOuverts">
+            <result>/WEB-INF/pages/parisOuverts.jsp</result>
+        </action>
+        <action name="parier" class="action.Parier" >
+            <result>/WEB-INF/pages/confirmationParis.jsp</result>
+        </action>
+        <action name="confirmationParis" class="action.Parier" method="confirmationParis">
+            <result>/WEB-INF/pages/pageAccueil.jsp</result>
+        </action>
+        <action name="annulerPari" class="action.mesParis" method="annulerPari">
+            <result>/WEB-INF/pages/mesParis.jsp</result>
         </action>
     </package>
     <constant name="struts.devMode" value="true" />
