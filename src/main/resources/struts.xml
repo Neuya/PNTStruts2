@@ -8,7 +8,7 @@
         <action name="accueilConnexion">
             <result>/WEB-INF/pages/connexion.jsp</result>
         </action>
-        <action name="accueil">
+        <action name="accueil" class="action.Environnement">
             <result>/WEB-INF/pages/pageAccueil.jsp</result>
         </action>
         <action name="connexion" class="action.Connexion">
@@ -32,6 +32,15 @@
         </action>
         <action name="annulerPari" class="action.mesParis" method="annulerPari">
             <result>/WEB-INF/pages/mesParis.jsp</result>
+        </action>
+        <action name="ajouterMatch" class="action.ajouterMatch">
+            <result>/WEB-INF/pages/admin/ajouterMatch.jsp</result>
+        </action>
+        <action name="listeTousMatch" class="action.listeMatchs">
+            <result>/WEB-INF/pages/admin/listeAllMatchs.jsp</result>
+        </action>
+        <action name="ajoutMatch" class="action.ajouterMatch" method="ajoutMatch">
+            <result>/WEB-INF/pages/admin/listeAllMatchs.jsp</result>
         </action>
     </package>
     <constant name="struts.devMode" value="true" />

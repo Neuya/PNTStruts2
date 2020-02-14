@@ -24,7 +24,10 @@ public class Environnement extends ActionSupport implements ApplicationAware, Se
         return session;
     }
 
-
+    public boolean isAdmin()
+    {
+        return getUtilisateur().isAdmin();
+    }
 
     public FacadeParis getFacadeParis()
     {
